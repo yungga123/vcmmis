@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\Home;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +15,9 @@ use App\Http\Controllers\Home;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homepage/index');
 });
 
-Route::get('homepage', [Home::class, 'index']);
+Route::get('/inventory', function(){
+    return view('inventory/inventory-menu');
+});
